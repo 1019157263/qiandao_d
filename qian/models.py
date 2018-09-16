@@ -9,6 +9,8 @@ class user(models.Model):
     pwd = models.CharField(max_length=200)
     email=models.CharField(max_length=200)
     time=models.DateTimeField('date published')
+    rmb = models.IntegerField(default=0) 
+    yingyong = models.IntegerField(default=2) 
     class Meta:
         #末尾不加s
         verbose_name_plural='用户'

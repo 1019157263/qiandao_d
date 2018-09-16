@@ -1,1 +1,7 @@
-666
+GET http://navi-user.uc.cn/signIn?ut=AAQ%2BQGmI2ZsbCEDUiE6fwueCq8oSNNYGnqN1%2FKnkWW66Xw%3D%3D&kps=AASg5%2FiyUr06k9zJDwoOJgCpWviXsoA5K77JjGGnrF9bUt5v%2Bzobr29km%2BOwC%2F8hYpK3vPX10lnSfHH7ZrQ5POE0XDZY6s%2FGfsGEHZgm6nBg%2FQ%3D%3D&version=0.0.2.9 HTTP/1.1
+Host: navi-user.uc.cn
+Proxy-Connection: keep-alive
+Proxy-Authorization: 1|1535528194618825510|com.UCMobile|4520a08baa0039ae4948b0aa5f3f1ad9
+user-agent: MI 6(Android/8.0.0) (com.UCMobile/12.0.6.986) Weex/0.16.1.26 1080x1920
+Accept-Encoding: gzip, deflate
+

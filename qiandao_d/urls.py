@@ -34,6 +34,8 @@ class qian:
     def qian(self):
        try:
         for i in self.data:
+           try:
+            print(i.name)
             if i.fk=='GET':            
               if i.cookie=='null':
                print('没cookie')
@@ -57,7 +59,7 @@ class qian:
               else:
                print('有cookie')
                a=requests.post(i.url,data=i.data,cookies=eval(i.cookie),headers=eval(i.header))
-              
+             
               try:
                    print(json.loads(a.text))
                    b=log_a.objects.create(user=uuid.uuid1(),name=i.name,username=i.user,data=str(a.json()),time= datetime.datetime.now())
@@ -66,7 +68,8 @@ class qian:
                    print(a.text)
                    b=log_a.objects.create(user=uuid.uuid1(),name=i.name,username=i.user,data=str(a.text),time= datetime.datetime.now())
              
-            
+           except:
+              print('错误')            
                 #未完              
        except:
          print('错误')    
@@ -75,7 +78,7 @@ def job():
     a=qian()
     a.qian()
 
-schedule.every(10).minutes.do(job)
+schedule.every(20).minutes.do(job)
 #schedule.every().hour.do(job)
 #schedule.every().day.at("00:00").do(job)
 #schedule.every().monday.do(job)
